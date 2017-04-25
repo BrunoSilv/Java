@@ -174,25 +174,25 @@ public class StopWatchApp extends JFrame {
         public void actionPerformed( ActionEvent evt ){
             String actCommand = evt.getActionCommand();
             if ( actCommand.equalsIgnoreCase( "reset" ) ){
-                System.out.println( "Clicked reset button" );
                 hr=0;
                 min=0;
                 sec=0;
                 setTime();
+                System.out.println( "Clicked reset button" );
             }
             else if( actCommand.equalsIgnoreCase( "start" ) ) {
-                System.out.println( "Clicked start button" );
                 if( !isWatchTicking ) {
                     createStopWatch();
                     stopwatch.setRunFlag(true);
                     stopwatch.start();
                 }
                 isWatchTicking = true;
+                System.out.println( "Clicked start button" );
             }
             else if( actCommand.equalsIgnoreCase( "stop" ) ) {
-                System.out.println( "Clicked stop button" );
                 isWatchTicking = false;
                 stopwatch.setRunFlag( false );
+                System.out.println( "Clicked stop button" );
             }
         }
     }
